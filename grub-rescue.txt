@@ -1,0 +1,5 @@
+1. 用live镜像登陆，并fdisk -l查看fedora-root分区，如名字为/dev/mapper/fedora-root
+2. set root=(/dev/mapper/fedora-root)
+3. linuxefi (hd0,gpt6)/vm* rghb single
+4. initrdefi (hd0,gpt6)/initrd*.img
+5. 登陆系统， grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
